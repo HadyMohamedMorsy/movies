@@ -1,0 +1,21 @@
+
+:host ::ng-deep .p-menubar{
+    justify-content: space-between !important;
+    background-color: var(--main-color);
+    border: none;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+:host ::ng-deep .p-menubar-start{
+    flex: 1 !important;
+}
+
+:host ::ng-deep .p-menubar{
+    .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text{
+    color: var(--white);
+    }
+}
