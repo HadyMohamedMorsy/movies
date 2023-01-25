@@ -13,6 +13,8 @@ import { GenresComponent } from './pages/genres/genres.component';
 import { SliderComponent } from './Component/slider/slider.component';
 import { SwiperModule } from 'swiper/angular';
 import { HttpClientModule } from '@angular/common/http';
+import { MovieItemsComponent } from './Component/movie-items/movie-items.component';
+import { ItemComponent } from './Component/movie-items/item/item.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     MoviesComponent,
     TvshowsComponent,
     GenresComponent,
-    SliderComponent
+    SliderComponent,
+    MovieItemsComponent,
+    ItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ButtonModule, MenubarModule, SwiperModule, HttpClientModule],
   providers: [],

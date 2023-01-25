@@ -1,9 +1,9 @@
-<swiper [config]="config" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
-  <ng-template swiperSlide *ngFor ="let item of items">
+<swiper [config]="config">
+  <ng-template swiperSlide *ngFor ="let item of itemsSlider">
       <div class="slide-content">
         <div class="overlay z-3 absolute top-0 left-0 right-0 bottom-0 w-full h-full" style="background-color: rgba(0,0,0,0.6);"></div>
         <div class="slide bg relative">
-          <img class="h-screen min-w-screen max-h-screen" [src]="urlImage+item.backdrop_path" alt="name text-6xl font-normal mb-3 -image" />
+          <img class="h-screen min-w-screen max-h-screen" [src]="(urlImage+item.backdrop_path)||''" alt="name text-6xl font-normal mb-3 -image" />
         </div>
         <div class="slide-pane w-full flex flex-column absolute col-offset-2">
             <h2 class="name text-6xl font-normal mb-3 "> {{ item.title }}  </h2>

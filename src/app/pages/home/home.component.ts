@@ -10,11 +10,23 @@ import { GetMovies, Results } from '../../interface/get-movies';
 })
 export class HomeComponent implements OnInit {
   private slider = inject(MoviesService);
-  movies!: Results[];
+  upcoming!: Results[];
+  Popular!: Results[];
+  topRated!: Results[];
 
   ngOnInit(): void {
-    this.slider.getMovies().subscribe((data) => {
-      this.movies = data.results;
+    this.slider.getMovies('movie/upcoming' , 12).subscribe((data) => {
+      this.upcoming = data;
     });
+
+    this.slider.getMovies('movie/popular' , 12).subscribe((data) => {
+      this.Popular = data;
+    });
+
+    this.slider.getMovies('movie/top_rated' , 12).subscribe((data) => {
+      this.topRated = data;
+    });
+
+
   }
 }

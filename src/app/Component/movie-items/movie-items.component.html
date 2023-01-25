@@ -1,0 +1,8 @@
+<div class="container">
+    <h1 class="header-movie text-4xl mt-6 mb-1"> Treading Movies</h1> 
+    <div class="grid">
+        <div class="col-2" *ngFor="let itemData of items">
+            <app-item [itemData]="itemData"></app-item>
+        </div>
+    </div>
+</div>

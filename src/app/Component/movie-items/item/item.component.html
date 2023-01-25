@@ -1,0 +1,18 @@
+
+<div class="movies pt-5">
+    <div class="image-banner relative"> 
+        <img [src] ="(environment + itemData.backdrop_path) || ''" alt="" loading="lazy">
+        <div class="box-rated  absolute">
+            <span class="reated flex justify-content-center align-content-center font-bold"> 
+             <span class="icon-star"> <i class="pi pi-star-fill"></i> </span>   {{ itemData.vote_average}}  
+            </span>
+        </div>
+    </div>
+    <div class="details">
+        <h3 class="title-movie mb-1"> {{ itemData.title}}  </h3>
+        <div class="detailing flex justify-content-between align-content-center mt-3">
+            <span> {{ itemData.release_date | date:'yyyy' }} </span>
+            <span class="p-2"> Movie</span>
+        </div>
+    </div>
+</div>

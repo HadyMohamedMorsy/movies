@@ -13,7 +13,7 @@ SwiperCore.use([Autoplay , Navigation, EffectFade]);
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent {
-  @Input() items!: Results[];
+  @Input() itemsSlider!: Results[];
 
   get urlImage(){
     return environment.urlImage;
@@ -31,11 +31,4 @@ export class SliderComponent {
     pagination: { clickable: true },
     scrollbar: { draggable: true }
   };
-
-  onSwiper([swiper]: any) {
-    console.log(swiper);
-  }
-  onSlideChange() {
-    console.log('slide change');
-  }
 }
