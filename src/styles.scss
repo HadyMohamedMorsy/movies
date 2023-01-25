@@ -4,13 +4,21 @@
 @import '~primeng/resources/themes/lara-light-blue/theme.css';
 @import '~primeicons/primeicons.css';
 @import '~primeng/resources/primeng.min.css';
-
 @import '~primeflex/primeflex.css';
 
+// swiper styyle
+@import 'swiper/css/bundle';
+
+// Swiper
 @import './styles/global';
 
 
 :root {
     --main-color: rgba(26, 26, 26);
     --white : #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
 }

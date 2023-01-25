@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
       },
       {
         label: 'Tv Shows',
-        routerLink: ['./tvShows']
+        routerLink: ['./tvshows']
       },
       {
         label: 'Genres',

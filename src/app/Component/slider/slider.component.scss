@@ -1,0 +1,124 @@
+img {
+  object-fit: cover;
+  transform: scale(1.7);
+  -webkit-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  -o-transform: scale(1.7);
+  transition: transform 3s;
+  -webkit-transition: transform 3s;
+  -moz-transition: transform 3s;
+  -ms-transition: transform 3s;
+  -o-transition: transform 3s;
+}
+
+:host ::ng-deep .swiper-slide-active{
+    .slide-content{
+      .bg{
+        img{
+          transform: scale(1);
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+        }
+    }
+  }
+}
+
+.pi-star-fill{
+  color: yellow;
+}
+
+
+%content-arrow {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+// swiper slide
+.slide-pane {
+  top: 30%;
+  z-index: 4;
+}
+
+.info {
+  color: rgba(#fff, 0.5);
+  max-width: 25%;
+  display: flex;
+  justify-content: space-between;
+  span {
+    font-size: 20px;
+  }
+
+  .reviews {
+    position: relative;
+    &::after {
+      content: '|';
+      position: absolute;
+      left: -25%;
+      font-size: 20px;
+    }
+    &::before {
+      content: '|';
+      position: absolute;
+      right: -25%;
+      font-size: 20px;
+    }
+  }
+}
+
+%icon {
+  font-size: 20px;
+  color: var(--main-color);
+}
+:host ::ng-deep .swiper-button {
+  &-prev {
+    @extend %content-arrow;
+  }
+  &-next {
+    @extend %content-arrow;
+  }
+}
+:host ::ng-deep .swiper-button-next {
+  &::after {
+    @extend %icon;
+  }
+}
+:host ::ng-deep .swiper-button-prev {
+  &::after {
+    @extend %icon;
+  }
+}
+
+:host ::ng-deep .swiper-rtl {
+  .swiper-button {
+    &_next {
+      &::after {
+        @extend %icon;
+      }
+    }
+    &_prev {
+      &::after {
+        @extend %icon;
+      }
+    }
+  }
+}
+// swiper slide
+
+// details
+.name {
+  color: var(--white);
+}
+.desc {
+  max-width: 50%;
+  color: var(--white);
+  line-height: 1.7;
+}
+// details
